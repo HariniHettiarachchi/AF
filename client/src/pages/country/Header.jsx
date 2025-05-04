@@ -137,25 +137,31 @@ const Header = ({ favoritesCount = 0 }) => {
       </div>
       
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-gradient-to-br from-indigo-600 to-purple-700 py-4 shadow-lg animate-fade-down z-40">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-white text-blue-900 py-4 shadow-lg animate-fade-down z-40">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="grid grid-cols-2 gap-2">
-              {['Home', 'Discover', 'Regions', 'Compare', 'Map', 'Favorites', 'Profile'].map((item) => (
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                { name: 'Home', path: '/countries' },
+                { name: 'Languages', path: '/languages' },
+                { name: 'Regions', path: '/regions' },
+                { name: 'Favorites', path: '/favorites' },
+                { name: 'World Map', path: '/map' },
+                { name: 'About Us', path: '/aboutus' },
+              ].map((item) => (
                 <Link
-                  key={item}
-                  to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                  className="flex items-center px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                  key={item.name}
+                  to={item.path}
+                  className="flex items-center px-4 py-3 text-blue-900 hover:bg-blue-100 rounded-lg transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-400 mr-2"></span>
-                  <span>{item}</span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-900 mr-2"></span>
+                  <span>{item.name}</span>
                 </Link>
               ))}
             </div>
-            
-            <div className="mt-4 pt-4 border-t border-white/10">
-              <div className="flex items-center px-4 py-2 text-white text-sm">
-                <Globe className="w-4 h-4 mr-2 text-indigo-200" />
+            <div className="mt-4 pt-4 border-t border-blue-200">
+              <div className="flex items-center px-4 py-2 text-blue-900 text-sm">
+                <Globe className="w-4 h-4 mr-2 text-blue-700" />
                 <span>Explore our beautiful planet one country at a time</span>
               </div>
             </div>

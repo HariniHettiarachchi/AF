@@ -21,13 +21,13 @@ const AboutUs = () => {
         </p>
         <h2 className="text-2xl font-bold text-blue-900 mb-4">Contact Us</h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-2">
-          <strong>Email:</strong> support@geovista.com
+          <strong>Email:</strong> geovistainfo@gmail.com
         </p>
         <p className="text-gray-700 text-lg leading-relaxed mb-2">
-          <strong>Phone:</strong> +1 (123) 456-7890
+          <strong>Phone:</strong> +94 (76) 178 8539
         </p>
         <p className="text-gray-700 text-lg leading-relaxed">
-          <strong>Address:</strong> 123 GeoVista Lane, World City, Earth
+          <strong>Address:</strong> No.2 , Sapumal Place, Battaramulla
         </p>
       </div>
       <Footer />
